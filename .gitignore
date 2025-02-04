@@ -5,37 +5,37 @@
 
 # Outputs #
 ########################################################
-**.docx
-**.pdf
-**.html
-**.pptx
-**.tex
-**.png
-**.jpg
-**.out
-**.log
-**.err
+*.docx
+*.pdf
+*.html
+*.pptx
+*.tex
+*.png
+*.jpg
+*.out
+*.log
+*.err
 
 # Data #
-**.csv
-**.xls
-**.rds
-**.RData
-**.RDataTmp
-**.db
-**.wal
-**duck.db.tmp/
-**.Rcache
-**.feather
-**.buffer
-**/Data/Derived/
+*.csv
+*.xls
+*.rds
+*.RData
+*.RDataTmp
+*.db
+*.wal
+*duck.db.tmp/
+*.Rcache
+*.feather
+*.buffer
+*/Data/Derived/
 
 # ML output
-**.json
-**.pkl
-**.npy
-**.sav
-**.joblib
+*.json
+*.pkl
+*.npy
+*.sav
+*.joblib
 
 # Ignore the renv directories#
 ##############################
