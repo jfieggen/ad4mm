@@ -4,6 +4,7 @@ data:
 outputs:
  figures: "/well/clifton/users/ncu080/ad4mm/figures"
  outputs: "/well/clifton/users/ncu080/ad4mm/outputs"
+ data: "/well/clifton/users/ncu080/ad4mm/data"
 scripts:
  cleaning: "/well/clifton/users/ncu080/UKB_Project/cleaning"
  processing: "/well/clifton/users/ncu080/UKB_Project/processing"
