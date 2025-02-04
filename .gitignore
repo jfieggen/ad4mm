@@ -1,0 +1,70 @@
+# Don't track documents and outputs #
+#gitignore copied from https://github.com/xiaonanl1996/MLforBrCa/blob/main/.gitignore (thank you :))
+
+# They are binary files and we can't easily view diffs on them, so it wouldn't be super useful #
+
+# Outputs #
+########################################################
+**.docx
+**.pdf
+**.html
+**.pptx
+**.tex
+**.png
+**.jpg
+**.out
+**.log
+**.err
+
+# Data #
+**.csv
+**.xls
+**.rds
+**.RData
+**.RDataTmp
+**.db
+**.wal
+**duck.db.tmp/
+**.Rcache
+**.feather
+**.buffer
+**/Data/Derived/
+
+# ML output
+**.json
+**.pkl
+**.npy
+**.sav
+**.joblib
+
+# Ignore the renv directories#
+##############################
+**/renv/library/
+**/renv/python/
+**/renv/staging/
+
+# Ignore archived #
+##############################
+**/archive/
+
+
+# Ignore testing files #
+##########################
+Test*
+
+# Logs and temporary files
+*.log
+temp/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
