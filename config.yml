@@ -1,0 +1,28 @@
+data:
+ database: "/well/clifton/projects/ukb_v2/ukb_v2.db"
+ portal:
+  HES: "/well/clifton/projects/ukb_v2/dataportal/hes"
+  deaths: "/well/clifton/projects/ukb_v2/dataportal/deaths"
+  GP: "/well/clifton/projects/ukb_v2/dataportal/gp"
+  proteomics: /well/clifton/projects/ukb_v2/dataportal/proteomics
+ derived: "/well/clifton/projects/ukb_v2/derived"
+ analysed: "/well/clifton/projects/ukb_v2/analysed"
+cleaning:
+ withdrawals: "/well/clifton/projects/ukb_v2/withdrawals/withdrawals_040324.csv"
+ renaming: "/well/clifton/projects/ukb_v2/renaming/Renaming_List_CHI_march24.csv"
+ coding: "/well/clifton/projects/ukb_v2/mappings/encodings"
+ mapping: "/well/clifton/projects/ukb_v2/mappings/project_excel_mappings/mm"
+outputs:
+ figures: "/well/clifton/users/ncu080/UKB_Project/outputs/figures"
+ flowcharts: "/well/clifton/users/ncu080/UKB_Project/outputs/flowcharts"
+ descriptives: "/well/clifton/users/ncu080/UKB_Project/outputs/descriptives/"
+ outputs: "/well/clifton/users/ncu080/UKB_Project/outputs/"
+explore: "/well/clifton/users/ncu080/UKB_Project/explore/"
+functions:
+ JC: "Scripts/Stats_Analysis/JCfunctions.R"
+ general: "K:/TEU/TEU_Members/Xiaonan_Liu/Projects/PRSonCholstrl/Scripts/Stats_Analysis/General_Func/JCfunctions_XL.R"
+ flowchart: "K:/TEU/TEU_Members/Xiaonan_Liu/Projects/PRSonCholstrl/Scripts/Stats_Analysis/General_Func/FlowChart_pop.R"
+ descriptive: "K:/TEU/TEU_Members/Xiaonan_Liu/Projects/PRSonCholstrl/Scripts/Stats_Analysis/General_Func/DescrpStats.R"
+scripts:
+ cleaning: "/well/clifton/users/ncu080/UKB_Project/cleaning"
+ processing: "/well/clifton/users/ncu080/UKB_Project/processing"
