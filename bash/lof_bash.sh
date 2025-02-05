@@ -2,7 +2,7 @@
 #SBATCH --partition=short
 #SBATCH --job-name=lof_novelty
 #SBATCH -A clifton.prj
-#SBATCH --mem=64G
+#SBATCH --mem=32G
 #SBATCH -o slurm_logs/lof_novelty.out
 #SBATCH -e slurm_logs/lof_novelty.err
 
