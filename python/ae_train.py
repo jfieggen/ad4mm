@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import os
 os.environ["TORCH_DYNAMO_DISABLE"] = "1"  # Disable torch-dynamo as doesn't work with python 3.11
+os.environ["TORCH_COMPILE_DISABLE"] = "1"
+
 import pandas as pd
 import numpy as np
 import torch

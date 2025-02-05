@@ -68,7 +68,7 @@ def main():
     print(f"Best ROC AUC score from CV: {grid_search.best_score_:.4f}")
     
     # Save the best estimator to a file for later use.
-    model_file = os.path.join(output_model_dir, "logistic_regression_best_model.pkl")
+    model_file = os.path.join(output_model_dir, "logistic_smote_best_model.pkl")
     joblib.dump(grid_search.best_estimator_, model_file)
     print(f"Saved best model to: {model_file}")
 
