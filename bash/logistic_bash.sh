@@ -6,7 +6,7 @@
 #SBATCH -A clifton.prj
 #SBATCH -p short
 
-#SBATCH --mem=64G
+#SBATCH --mem=16G
 
 # Log locations which are relative to the current
 # working directory of the submission
