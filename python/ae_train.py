@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 import os
-os.environ["TORCH_DYNAMO_DISABLE"] = "1"  # Disable torch-dynamo as doesn't work with python 3.11
+# Disable Torch Dynamo and Compilation
+os.environ["TORCH_DYNAMO_DISABLE"] = "1"
 os.environ["TORCH_COMPILE_DISABLE"] = "1"
+
+# Ensure distributed debug level is set correctly
+os.environ["TORCH_DISTRIBUTED_DEBUG"] = "OFF"  # Must be "OFF", "INFO", or "DETAIL"
 
 import pandas as pd
 import numpy as np

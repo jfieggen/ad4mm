@@ -28,7 +28,7 @@ from tabpfn import TabPFNClassifier
 from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix
 
 # Instantiate TabPFN model
-model = TabPFNClassifier(device="cuda")
+model = TabPFNClassifier(device="cuda", ignore_pretraining_limits=True)
 
 # Fit TabPFN to the training data
 model.fit(X_train_scaled, y_train)

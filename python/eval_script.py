@@ -22,6 +22,7 @@ Models evaluated include:
 """
 
 import os
+import sys
 import numpy as np
 import pandas as pd
 import joblib
@@ -37,6 +38,22 @@ import xgboost as xgb
 from tabpfn import TabPFNClassifier
 
 from sklearn.metrics import roc_auc_score, confusion_matrix, roc_curve
+
+#####################################
+# Helper class to duplicate output (Tee)
+#####################################
+class Tee:
+    """
+    Duplicate the output to multiple streams.
+    """
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+    def flush(self):
+        for f in self.files:
+            f.flush()
 
 #####################################
 # Helper functions for metric computation
@@ -256,41 +273,54 @@ def evaluate_xgboost(X_train, X_test, y_train, y_test, model_dir):
     evaluate_model("XGBoost", y_train, y_test, train_scores, test_scores)
 
 #####################################
-# Main function: Load data and run evaluations
+# Main function: Load data, run evaluations, and write output
 #####################################
 def main():
     # Define directories (adjust these paths as necessary)
     DATA_DIR = "/well/clifton/users/ncu080/ad4mm/data"
     MODEL_DIR = "/well/clifton/users/ncu080/ad4mm/outputs/models"
+    OUTPUT_DIR = "/well/clifton/users/ncu080/ad4mm/outputs/performace_metrics"
     
-    # File paths for preprocessed training and test data
-    x_train_path = os.path.join(DATA_DIR, "x_train.csv")
-    y_train_path = os.path.join(DATA_DIR, "y_train.csv")
-    x_test_path  = os.path.join(DATA_DIR, "x_test.csv")
-    y_test_path  = os.path.join(DATA_DIR, "y_test.csv")
+    # Create the output directory if it doesn't exist.
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    output_file_path = os.path.join(OUTPUT_DIR, "evaluation_results.txt")
     
-    # Load training data
-    print("Loading training data...")
-    X_train = pd.read_csv(x_train_path)
-    y_train = pd.read_csv(y_train_path)
-    y_train = y_train.iloc[:, 0].values if y_train.shape[1] == 1 else y_train.values.ravel()
-    
-    # Load test data
-    print("Loading test data...")
-    X_test = pd.read_csv(x_test_path)
-    y_test = pd.read_csv(y_test_path)
-    y_test = y_test.iloc[:, 0].values if y_test.shape[1] == 1 else y_test.values.ravel()
-    
-    # Evaluate each model.
-    evaluate_autoencoder(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_isolation_forest(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_lof(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_logistic_smote(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_logistic_regression(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_one_class_svm(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_tabpfn(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_xgboost_smote(X_train, X_test, y_train, y_test, MODEL_DIR)
-    evaluate_xgboost(X_train, X_test, y_train, y_test, MODEL_DIR)
-    
+    # Save the original stdout so we can write to both console and file.
+    original_stdout = sys.stdout
+    with open(output_file_path, "w") as output_file:
+        sys.stdout = Tee(original_stdout, output_file)
+        
+        print("Loading training data...")
+        # File paths for preprocessed training and test data
+        x_train_path = os.path.join(DATA_DIR, "x_train.csv")
+        y_train_path = os.path.join(DATA_DIR, "y_train.csv")
+        x_test_path  = os.path.join(DATA_DIR, "x_test.csv")
+        y_test_path  = os.path.join(DATA_DIR, "y_test.csv")
+        
+        # Load training data
+        X_train = pd.read_csv(x_train_path)
+        y_train = pd.read_csv(y_train_path)
+        y_train = y_train.iloc[:, 0].values if y_train.shape[1] == 1 else y_train.values.ravel()
+        
+        print("Loading test data...")
+        # Load test data
+        X_test = pd.read_csv(x_test_path)
+        y_test = pd.read_csv(y_test_path)
+        y_test = y_test.iloc[:, 0].values if y_test.shape[1] == 1 else y_test.values.ravel()
+        
+        # Evaluate each model.
+        evaluate_autoencoder(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_isolation_forest(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_lof(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_logistic_smote(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_logistic_regression(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_one_class_svm(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_tabpfn(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_xgboost_smote(X_train, X_test, y_train, y_test, MODEL_DIR)
+        evaluate_xgboost(X_train, X_test, y_train, y_test, MODEL_DIR)
+        
+        # Restore the original stdout
+        sys.stdout = original_stdout
+
 if __name__ == "__main__":
     main()

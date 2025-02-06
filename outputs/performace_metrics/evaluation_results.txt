@@ -1,0 +1,308 @@
+Loading training data...
+Loading test data...
+
+--- Autoencoder ---
+
+=== Autoencoder Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.0006
+  Used Threshold: 0.0006
+  Precision: 0.0056
+  Recall: 0.2313
+  F1 Score: 0.0110
+  AUC-ROC: 0.5340
+  Confusion Matrix:
+[[36249  6003]
+ [  113    34]]
+  Sensitivity: 0.2313
+  Specificity: 0.8579
+  PPV: 0.0056
+  NPV: 0.9969
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.0002
+  Used Threshold: 0.0006
+  Precision: 0.0045
+  Recall: 0.2593
+  F1 Score: 0.0088
+  AUC-ROC: 0.5764
+  Confusion Matrix:
+[[9022 1551]
+ [  20    7]]
+  Sensitivity: 0.2593
+  Specificity: 0.8533
+  PPV: 0.0045
+  NPV: 0.9978
+
+--- Isolation Forest ---
+
+=== Isolation Forest Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): -0.1168
+  Used Threshold: -0.1168
+  Precision: 0.0145
+  Recall: 0.5374
+  F1 Score: 0.0283
+  AUC-ROC: 0.7633
+  Confusion Matrix:
+[[36898  5354]
+ [   68    79]]
+  Sensitivity: 0.5374
+  Specificity: 0.8733
+  PPV: 0.0145
+  NPV: 0.9982
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): -0.1375
+  Used Threshold: -0.1168
+  Precision: 0.0130
+  Recall: 0.6667
+  F1 Score: 0.0256
+  AUC-ROC: 0.8910
+  Confusion Matrix:
+[[9211 1362]
+ [   9   18]]
+  Sensitivity: 0.6667
+  Specificity: 0.8712
+  PPV: 0.0130
+  NPV: 0.9990
+
+--- Local Outlier Factor ---
+
+=== Local Outlier Factor Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 1.1564
+  Used Threshold: 1.1564
+  Precision: 0.0080
+  Recall: 0.6395
+  F1 Score: 0.0158
+  AUC-ROC: 0.7271
+  Confusion Matrix:
+[[30603 11649]
+ [   53    94]]
+  Sensitivity: 0.6395
+  Specificity: 0.7243
+  PPV: 0.0080
+  NPV: 0.9983
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 1.1483
+  Used Threshold: 1.1564
+  Precision: 0.0070
+  Recall: 0.8148
+  F1 Score: 0.0139
+  AUC-ROC: 0.8332
+  Confusion Matrix:
+[[7447 3126]
+ [   5   22]]
+  Sensitivity: 0.8148
+  Specificity: 0.7043
+  PPV: 0.0070
+  NPV: 0.9993
+
+--- Logistic Regression (SMOTE) ---
+
+=== Logistic Regression (SMOTE) Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.3556
+  Used Threshold: 0.3556
+  Precision: 0.0138
+  Recall: 0.8367
+  F1 Score: 0.0271
+  AUC-ROC: 0.8662
+  Confusion Matrix:
+[[33456  8796]
+ [   24   123]]
+  Sensitivity: 0.8367
+  Specificity: 0.7918
+  PPV: 0.0138
+  NPV: 0.9993
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.6928
+  Used Threshold: 0.3556
+  Precision: 0.0095
+  Recall: 0.7778
+  F1 Score: 0.0187
+  AUC-ROC: 0.8449
+  Confusion Matrix:
+[[8379 2194]
+ [   6   21]]
+  Sensitivity: 0.7778
+  Specificity: 0.7925
+  PPV: 0.0095
+  NPV: 0.9993
+
+--- Logistic Regression ---
+
+=== Logistic Regression Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.0083
+  Used Threshold: 0.0083
+  Precision: 0.0191
+  Recall: 0.7279
+  F1 Score: 0.0371
+  AUC-ROC: 0.8533
+  Confusion Matrix:
+[[36745  5507]
+ [   40   107]]
+  Sensitivity: 0.7279
+  Specificity: 0.8697
+  PPV: 0.0191
+  NPV: 0.9989
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.0085
+  Used Threshold: 0.0083
+  Precision: 0.0151
+  Recall: 0.7778
+  F1 Score: 0.0296
+  AUC-ROC: 0.8517
+  Confusion Matrix:
+[[9202 1371]
+ [   6   21]]
+  Sensitivity: 0.7778
+  Specificity: 0.8703
+  PPV: 0.0151
+  NPV: 0.9993
+
+--- One-Class SVM ---
+
+=== One-Class SVM Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): -0.4657
+  Used Threshold: -0.4657
+  Precision: 0.0138
+  Recall: 0.5306
+  F1 Score: 0.0269
+  AUC-ROC: 0.7457
+  Confusion Matrix:
+[[36668  5584]
+ [   69    78]]
+  Sensitivity: 0.5306
+  Specificity: 0.8678
+  PPV: 0.0138
+  NPV: 0.9981
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): -0.4263
+  Used Threshold: -0.4657
+  Precision: 0.0133
+  Recall: 0.7037
+  F1 Score: 0.0261
+  AUC-ROC: 0.8624
+  Confusion Matrix:
+[[9164 1409]
+ [   8   19]]
+  Sensitivity: 0.7037
+  Specificity: 0.8667
+  PPV: 0.0133
+  NPV: 0.9991
+
+--- TabPFN ---
+
+=== TabPFN Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.0006
+  Used Threshold: 0.0006
+  Precision: 0.0197
+  Recall: 0.7143
+  F1 Score: 0.0383
+  AUC-ROC: 0.8121
+  Confusion Matrix:
+[[37015  5237]
+ [   42   105]]
+  Sensitivity: 0.7143
+  Specificity: 0.8761
+  PPV: 0.0197
+  NPV: 0.9989
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.0012
+  Used Threshold: 0.0006
+  Precision: 0.0150
+  Recall: 0.7407
+  F1 Score: 0.0293
+  AUC-ROC: 0.8831
+  Confusion Matrix:
+[[9256 1317]
+ [   7   20]]
+  Sensitivity: 0.7407
+  Specificity: 0.8754
+  PPV: 0.0150
+  NPV: 0.9992
+
+--- XGBoost with SMOTE ---
+
+=== XGBoost with SMOTE Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.5181
+  Used Threshold: 0.5181
+  Precision: 0.0195
+  Recall: 0.7551
+  F1 Score: 0.0381
+  AUC-ROC: 0.8964
+  Confusion Matrix:
+[[36681  5571]
+ [   36   111]]
+  Sensitivity: 0.7551
+  Specificity: 0.8681
+  PPV: 0.0195
+  NPV: 0.9990
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.5374
+  Used Threshold: 0.5181
+  Precision: 0.0150
+  Recall: 0.7778
+  F1 Score: 0.0294
+  AUC-ROC: 0.8403
+  Confusion Matrix:
+[[9191 1382]
+ [   6   21]]
+  Sensitivity: 0.7778
+  Specificity: 0.8693
+  PPV: 0.0150
+  NPV: 0.9993
+
+--- XGBoost ---
+
+=== XGBoost Evaluation ===
+
+Training Data Metrics:
+  Optimal Threshold (from training): 0.0240
+  Used Threshold: 0.0240
+  Precision: 0.0688
+  Recall: 0.8163
+  F1 Score: 0.1270
+  AUC-ROC: 0.9291
+  Confusion Matrix:
+[[40629  1623]
+ [   27   120]]
+  Sensitivity: 0.8163
+  Specificity: 0.9616
+  PPV: 0.0688
+  NPV: 0.9993
+
+Test Data Metrics (using training threshold):
+  Optimal Threshold (from training): 0.0264
+  Used Threshold: 0.0240
+  Precision: 0.0433
+  Recall: 0.7037
+  F1 Score: 0.0815
+  AUC-ROC: 0.8464
+  Confusion Matrix:
+[[10153   420]
+ [    8    19]]
+  Sensitivity: 0.7037
+  Specificity: 0.9603
+  PPV: 0.0433
+  NPV: 0.9992
