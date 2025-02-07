@@ -2,7 +2,7 @@
 #SBATCH --partition=gpu_short
 #SBATCH --gpus=1
 #SBATCH --job-name=tabpfn_train
-#SBATCH -A clifton.prj
+#SBATCH -A clifton.prj.high
 #SBATCH -o slurm_logs/tabpfn_train.out
 #SBATCH -e slurm_logs/tabpfn_train.err
 

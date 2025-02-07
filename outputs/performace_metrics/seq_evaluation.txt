@@ -1,0 +1,34 @@
+Loading training data...
+Loading test data...
+
+--- Loading Sequential Ensemble Model ---
+
+--- Evaluating on Training Data ---
+Training Metrics:
+  Precision: 1.0000
+  Recall (Sensitivity): 0.5034
+  F1 Score: 0.6697
+  AUC-ROC: 0.7513
+  Confusion Matrix:
+[[42252     0]
+ [   73    74]]
+  Sensitivity (TPR): 0.5034
+  Specificity (TNR): 1.0000
+  PPV (Positive Predictive Value): 1.0000
+  NPV (Negative Predictive Value): 0.9983
+
+
+--- Evaluating on Test Data ---
+Test Metrics:
+  Precision: 0.3077
+  Recall (Sensitivity): 0.1481
+  F1 Score: 0.2000
+  AUC-ROC: 0.6841
+  Confusion Matrix:
+[[10564     9]
+ [   23     4]]
+  Sensitivity (TPR): 0.1481
+  Specificity (TNR): 0.9991
+  PPV (Positive Predictive Value): 0.3077
+  NPV (Negative Predictive Value): 0.9978
+

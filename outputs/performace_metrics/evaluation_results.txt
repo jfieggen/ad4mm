@@ -6,34 +6,34 @@ Loading test data...
 === Autoencoder Evaluation ===
 
 Training Data Metrics:
-  Optimal Threshold (from training): 0.0006
-  Used Threshold: 0.0006
-  Precision: 0.0056
-  Recall: 0.2313
-  F1 Score: 0.0110
-  AUC-ROC: 0.5340
+  Optimal Threshold (from training): 0.5353
+  Used Threshold: 0.5353
+  Precision: 0.0099
+  Recall: 0.5714
+  F1 Score: 0.0195
+  AUC-ROC: 0.7286
   Confusion Matrix:
-[[36249  6003]
- [  113    34]]
-  Sensitivity: 0.2313
-  Specificity: 0.8579
-  PPV: 0.0056
-  NPV: 0.9969
+[[33850  8402]
+ [   63    84]]
+  Sensitivity: 0.5714
+  Specificity: 0.8011
+  PPV: 0.0099
+  NPV: 0.9981
 
 Test Data Metrics (using training threshold):
-  Optimal Threshold (from training): 0.0002
-  Used Threshold: 0.0006
-  Precision: 0.0045
-  Recall: 0.2593
-  F1 Score: 0.0088
-  AUC-ROC: 0.5764
+  Optimal Threshold (from training): 0.6476
+  Used Threshold: 0.5353
+  Precision: 0.0092
+  Recall: 0.7037
+  F1 Score: 0.0183
+  AUC-ROC: 0.8309
   Confusion Matrix:
-[[9022 1551]
- [  20    7]]
-  Sensitivity: 0.2593
-  Specificity: 0.8533
-  PPV: 0.0045
-  NPV: 0.9978
+[[8537 2036]
+ [   8   19]]
+  Sensitivity: 0.7037
+  Specificity: 0.8074
+  PPV: 0.0092
+  NPV: 0.9991
 
 --- Isolation Forest ---
 
@@ -210,34 +210,34 @@ Test Data Metrics (using training threshold):
 === TabPFN Evaluation ===
 
 Training Data Metrics:
-  Optimal Threshold (from training): 0.0006
-  Used Threshold: 0.0006
-  Precision: 0.0197
-  Recall: 0.7143
-  F1 Score: 0.0383
-  AUC-ROC: 0.8121
+  Optimal Threshold (from training): 0.0090
+  Used Threshold: 0.0090
+  Precision: 0.0148
+  Recall: 0.7755
+  F1 Score: 0.0291
+  AUC-ROC: 0.8731
   Confusion Matrix:
-[[37015  5237]
- [   42   105]]
-  Sensitivity: 0.7143
-  Specificity: 0.8761
-  PPV: 0.0197
-  NPV: 0.9989
+[[34668  7584]
+ [   33   114]]
+  Sensitivity: 0.7755
+  Specificity: 0.8205
+  PPV: 0.0148
+  NPV: 0.9990
 
 Test Data Metrics (using training threshold):
-  Optimal Threshold (from training): 0.0012
-  Used Threshold: 0.0006
-  Precision: 0.0150
-  Recall: 0.7407
-  F1 Score: 0.0293
-  AUC-ROC: 0.8831
+  Optimal Threshold (from training): 0.1300
+  Used Threshold: 0.0090
+  Precision: 0.0116
+  Recall: 0.8148
+  F1 Score: 0.0229
+  AUC-ROC: 0.8715
   Confusion Matrix:
-[[9256 1317]
- [   7   20]]
-  Sensitivity: 0.7407
-  Specificity: 0.8754
-  PPV: 0.0150
-  NPV: 0.9992
+[[8697 1876]
+ [   5   22]]
+  Sensitivity: 0.8148
+  Specificity: 0.8226
+  PPV: 0.0116
+  NPV: 0.9994
 
 --- XGBoost with SMOTE ---
 
@@ -306,3 +306,5 @@ Test Data Metrics (using training threshold):
   Specificity: 0.9603
   PPV: 0.0433
   NPV: 0.9992
+
+--- Sequential Ensemble ---
